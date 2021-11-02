@@ -58,6 +58,7 @@ class Piggy(PiggyParent):
     '''
     def liam(self):
      self.deg_fwd(360)
+     time.sleep(3)
      self.right(primary = 40, counter = -40)
      time.sleep()
      self.stop()
