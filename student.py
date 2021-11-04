@@ -58,13 +58,17 @@ class Piggy(PiggyParent):
     '''
     def liam(self):
       for i in range(4):
-        self.fwd()
+        self.deg_fwd(360)
+        time.sleep(1)
+
+'''
+        #self.fwd()
         time.sleep(3)
         self.stop()
         self.right(primary = 40, counter = -40)
         time.sleep(1.2)
         self.stop()
-    
+    '''
 
     
     def dance(self):
