@@ -58,7 +58,7 @@ class Piggy(PiggyParent):
     '''
     def liam(self):
       for i in range(4):
-        self.deg_fwd(360)
+        self.deg_fwd(180)
         time.sleep(3)
 
       '''
