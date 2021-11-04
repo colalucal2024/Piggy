@@ -71,21 +71,22 @@ class Piggy(PiggyParent):
         # TODO: check to see if it's safe before dancing
         
         # lower-ordered example...
-        self.right(primary=50, counter=50)
-        time.sleep(2)
-        self.stop()
-        self.right(primary = 100, counter = -100)
-        time.sleep(3)
-        self.left(primary = 100, counter = -100)
-        time.sleep(3)
-        self.back()
-        time.sleep(3)
-        self.fwd()
-        self.right(primary = 70, counter = -170)
-        time.sleep(3)
-        self.left(primary = 70, counter = -170)
-        time.sleep(3)
-        self.stop()
+        for i in range (3):
+          self.right(primary=50, counter=50)
+          time.sleep(1)
+          self.stop()
+          self.right(primary = 100, counter = -100)
+          time.sleep(1)
+          self.left(primary = 100, counter = -100)
+          time.sleep(1)
+          self.back()
+          time.sleep(1)
+          self.fwd()
+          self.right(primary = 70, counter = -170)
+          time.sleep(1)
+          self.left(primary = 70, counter = -170)
+          time.sleep(1)
+          self.stop()
 
         
 
