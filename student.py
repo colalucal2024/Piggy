@@ -63,7 +63,7 @@ class Piggy(PiggyParent):
       if distance <= 100:
         self.stop()
       else:
-        slef.fwd()
+        self.fwd()
   
       
       
