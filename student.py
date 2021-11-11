@@ -59,9 +59,11 @@ class Piggy(PiggyParent):
     '''
 
     def liam(self):
-      while True:
-        self.read_distance()
-        pass
+      self.read_distance()
+     if self.distance() <= 2:
+       self.stop()
+  
+      
       
 
 
