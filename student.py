@@ -58,11 +58,25 @@ class Piggy(PiggyParent):
     ****************
     '''
 
-    def liam(self):
-      self.read_distance()
-     if self.distance() <= 2:
-       self.stop()
+  def on_screen():
+  if distance <= 2:
+    return True
+  else:
+    return False
+
+
+
+#main program
+
+def MoveForward():
+  hal.forward(10)
+  time.sleep(0.1)
   
+while True:
+  if on_screen():
+    MoveForward()
+  else:
+    self.stop()
       
       
 
