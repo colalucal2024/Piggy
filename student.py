@@ -41,7 +41,7 @@ class Piggy(PiggyParent):
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
-                "s": ("square", self.square)
+                "s": ("square", self.square),
                 "x": ("distance", self.liam)
                 }
         # loop and print the menu...
