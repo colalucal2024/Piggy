@@ -59,10 +59,11 @@ class Piggy(PiggyParent):
     '''
 
     def liam(self):
-      self.fwd()
       self.read_distance()
-      if self.distance() <= 2:
-       self.stop()
+      if distance <= 100:
+        self.stop()
+      else:
+        slef.fwd()
   
       
       
