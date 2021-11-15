@@ -70,7 +70,7 @@ class Piggy(PiggyParent):
           self.left(primary = 38, counter = -38)
           time.sleep(1.2)
           self.fwd()
-          time.sleep(.5)
+          time.sleep(1)
           self.left(primary = 38, counter = -38)
           time.sleep(1.2)
           self.right(primary = 38, counter = -38)
