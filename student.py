@@ -66,7 +66,8 @@ class Piggy(PiggyParent):
           for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
                 self.servo(ang)
                 time.sleep(.1)
-                if self.read_distance() > 100 and ang < self.MIDPOINT: 
+
+                if self.read_distance() > 100 and ang < self.MIDPOINT + 400: 
                     self.stop()
                     self.right(primary = 38, counter = -38)
                     time.sleep(1.2)
@@ -82,6 +83,26 @@ class Piggy(PiggyParent):
                     time.sleep(1.5)
                     self.right(primary = 38, counter = -38)
                     time.sleep(1.0)
+                    self.fwd()
+
+'''                if self.read_distance() > 100 and ang < self.MIDPOINT - 400: 
+                    self.stop()
+                    self.right(primary = 38, counter = -38)
+                    time.sleep(1.2)
+                    self.fwd()
+                    time.sleep(1.5)
+                    self.left(primary = 38, counter = -38)
+                    time.sleep(1.5)
+                    self.fwd()
+                    time.sleep(2)
+                    self.left(primary = 38, counter = -38)
+                    time.sleep(1.2)
+                    self.fwd()
+                    time.sleep(1.5)
+                    self.right(primary = 38, counter = -38)
+                    time.sleep(1.0)
+                    self.fwd()
+'''                    
         else:
           self.fwd()
 
