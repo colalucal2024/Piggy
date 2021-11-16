@@ -68,7 +68,7 @@ class Piggy(PiggyParent):
                 time.sleep(.1)
 
 
-          if self.read_distance() > 100 and self.servo() < 2000: 
+          if self.read_distance() > 100 and self.servo(angle) < 2000: 
               self.stop()
               self.right(primary = 38, counter = -38)
               time.sleep(1.2)
