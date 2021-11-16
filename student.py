@@ -68,22 +68,22 @@ class Piggy(PiggyParent):
                 time.sleep(.1)
 
 
-          if self.read_distance() > 100 and self.servo(<2000): 
-              self.stop()
-              self.right(primary = 38, counter = -38)
-              time.sleep(1.2)
-              self.fwd()
-              time.sleep(1.5)
-              self.left(primary = 38, counter = -38)
-              time.sleep(1.5)
-              self.fwd()
-              time.sleep(2)
-              self.left(primary = 38, counter = -38)
-              time.sleep(1.2)
-              self.fwd()
-              time.sleep(1.5)
-              self.right(primary = 38, counter = -38)
-              time.sleep(1.0)
+            if self.read_distance() > 100 and ang <self.MIDPOINT: 
+                self.stop()
+                self.right(primary = 38, counter = -38)
+                time.sleep(1.2)
+                self.fwd()
+                time.sleep(1.5)
+                self.left(primary = 38, counter = -38)
+                time.sleep(1.5)
+                self.fwd()
+                time.sleep(2)
+                self.left(primary = 38, counter = -38)
+                time.sleep(1.2)
+                self.fwd()
+                time.sleep(1.5)
+                self.right(primary = 38, counter = -38)
+                time.sleep(1.0)
         else:
           self.fwd()
 
