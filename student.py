@@ -61,7 +61,7 @@ class Piggy(PiggyParent):
     def liam(self):
       while True:
         self.read_distance()
-        if self.read_distance() < 100:
+        if self.read_distance() < 150:
           self.stop()
           for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
                 self.servo(ang)
