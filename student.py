@@ -59,14 +59,16 @@ class Piggy(PiggyParent):
     '''
 
     def liam(self):
+      stopping_distance = 150
+      check_distance = 400
       while True:
-        if self.read_distance() < 150:
+        if self.read_distance() < stopping_distance:
           self.stop()
           for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
                 self.servo(ang)
                 time.sleep(.1)
 
-                if self.read_distance() > 100 and ang < self.MIDPOINT and ang != self.MIDPOINT: 
+                if self.read_distance() > check_distance and ang < self.MIDPOINT and ang != self.MIDPOINT: 
                     self.stop()
                     self.right(primary = 38, counter = -38)
                     time.sleep(1.2)
@@ -85,7 +87,7 @@ class Piggy(PiggyParent):
                     self.servo(self.MIDPOINT)
                 
                 
-                elif self.read_distance() > 100 and ang > self.MIDPOINT and ang != self.MIDPOINT: 
+                elif self.read_distance() > check_distance and ang > self.MIDPOINT and ang != self.MIDPOINT: 
                     self.stop()
                     self.left(primary = 38, counter = -38)
                     time.sleep(1.2)
