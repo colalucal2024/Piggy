@@ -105,8 +105,8 @@ class Piggy(PiggyParent):
             time.sleep(1.0)
             self.servo(self.MIDPOINT)
             
-            else:
-              self.back()
+          else:
+            self.back()
 
     
       
