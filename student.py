@@ -75,7 +75,7 @@ class Piggy(PiggyParent):
           self.servo(2000)
           time.sleep(.5)
           right = self.read_distance()
-          if (right < left): 
+          if (right > left): 
             self.stop()
             self.right(primary = 38, counter = -38)
             time.sleep(1.2)
@@ -94,7 +94,7 @@ class Piggy(PiggyParent):
             self.servo(self.MIDPOINT)
                 
                 
-          elif (left < right): 
+          elif (right < left): 
             self.stop()
             self.left(primary = 38, counter = -38)
             time.sleep(1.2)
