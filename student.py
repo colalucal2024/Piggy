@@ -80,12 +80,16 @@ class Piggy(PiggyParent):
       while True:
         if self.read_distance() >= stopping_distance:
           self.fwd_w_scan()
-        elif self.read_distance() < stopping_distance and right > left and right > center:
+        elif self.read_distance() < stopping_distance:
+          if (right > left):
             self.right(primary = 30, counter = -20)
             time.sleep(1)
             self.left(primary = 30, counter = -20)
-        elif self.read_distance() < stopping_distance and left > right and left > center:
+            time.sleep(1)
+
+          if (right < left):
             self.left(primary = 30, counter = -20)
+            time.sleep(1)
             self.right(primary = 30, counter = -20)
             time.sleep(1)
 
