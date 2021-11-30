@@ -85,15 +85,15 @@ class Piggy(PiggyParent):
         elif self.read_distance() < stopping_distance:
           self.read_distance()
           if (right > left):
-            self.right(primary = 30, counter = -20)
+            self.right(primary = 30, counter = 20)
             time.sleep(1)
-            self.left(primary = 30, counter = -20)
+            self.left(primary = 30, counter = 20)
             time.sleep(1)
 
           if (right < left):
-            self.left(primary = 30, counter = -20)
+            self.left(primary = 30, counter = 20)
             time.sleep(1)
-            self.right(primary = 30, counter = -20)
+            self.right(primary = 30, counter = 20)
             time.sleep(1)
 
     def liam(self):
