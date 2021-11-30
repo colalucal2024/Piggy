@@ -57,6 +57,17 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+    def fwd_w_scan:
+      self.fwd()
+      self.servo(1000)
+      time.sleep(.5)
+      right = self.read_distance()
+      self.servo(1500)
+      time.sleep(.5)
+      center = self.read_distance()
+      self.servo(2000)
+      time.sleep(.5)
+      left = self.read_distance()
 
     def liam(self):
       stopping_distance = 200
