@@ -58,7 +58,7 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-    def fwd_w_scan:
+    def fwd_w_scan(self):
       self.fwd()
       self.servo(1000)
       time.sleep(.5)
