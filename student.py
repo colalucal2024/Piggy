@@ -74,15 +74,18 @@ class Piggy(PiggyParent):
     def swerve(self):
       stopping_distance = 200
       check_distance = 300
+      right = self.read_distance()
+      center = self.read_distance()
+      left = self.read_distance()
       while True:
         if self.read_distance() >= stopping_distance:
           self.fwd_w_scan()
-
-        elif (right > left):
-          self.right(primary = 38, counter = -20)
-
-        elif (right < left):
-          self.left(primary = 38, counter = -20)
+        elif self.read_distance() < stopping_distance and right > left and right > center:
+            self.right(primary = 38, counter = -20)
+            self.left(primary = 38, counter = -20)
+        elif self.read_distance() < stopping_distance and left > right and left > center:
+            self.left(primary = 38, counter = -20)
+            self.right(primary = 38, counter = -20)
 
     def liam(self):
       stopping_distance = 200
