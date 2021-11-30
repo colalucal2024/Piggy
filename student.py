@@ -81,11 +81,13 @@ class Piggy(PiggyParent):
         if self.read_distance() >= stopping_distance:
           self.fwd_w_scan()
         elif self.read_distance() < stopping_distance and right > left and right > center:
-            self.right(primary = 38, counter = -20)
-            self.left(primary = 38, counter = -20)
+            self.right(primary = 30, counter = -20)
+            time.sleep(1)
+            self.left(primary = 30, counter = -20)
         elif self.read_distance() < stopping_distance and left > right and left > center:
-            self.left(primary = 38, counter = -20)
-            self.right(primary = 38, counter = -20)
+            self.left(primary = 30, counter = -20)
+            self.right(primary = 30, counter = -20)
+            time.sleep(1)
 
     def liam(self):
       stopping_distance = 200
