@@ -71,6 +71,19 @@ class Piggy(PiggyParent):
         time.sleep(.25)
         left = self.read_distance()
 
+    def swerve(self):
+      stopping_distance = 200
+      check_distance = 300
+      while True:
+        if self.read_distance() >= stopping_distance:
+          self.fwd_w_scan()
+
+        elif (right > left):
+          self.right(primary = 38, counter = -20)
+
+        elif (right < left):
+          self.left(primary = 38, counter = -20)
+
     def liam(self):
       stopping_distance = 200
       check_distance = 400
@@ -88,37 +101,37 @@ class Piggy(PiggyParent):
 
           if (right > left): 
             self.stop()
-            self.right(primary = 38, counter = -38)
+            self.right()
             time.sleep(1.2)
             self.fwd()
             time.sleep(1.5)
-            self.left(primary = 38, counter = -38)
+            self.left()
             time.sleep(1.5)
             self.fwd()
             time.sleep(2)
-            self.left(primary = 40, counter = -40)
+            self.left()
             time.sleep(1.2)
             self.fwd()
             time.sleep(1.5)
-            self.right(primary = 38, counter = -38)
+            self.right()
             time.sleep(1.0)
             self.servo(self.MIDPOINT)
 
           elif (right < left): 
             self.stop()
-            self.left(primary = 38, counter = -38)
+            self.left()
             time.sleep(1.2)
             self.fwd()
             time.sleep(1.5)
-            self.right(primary = 38, counter = -38)
+            self.right()
             time.sleep(1.5)
             self.fwd()
             time.sleep(2)
-            self.right(primary = 38, counter = -38)
+            self.right()
             time.sleep(1.2)
             self.fwd()
             time.sleep(1.5)
-            self.left(primary = 38, counter = -38)
+            self.left()
             time.sleep(1.0)
             self.servo(self.MIDPOINT)
             
