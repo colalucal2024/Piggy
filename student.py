@@ -62,13 +62,13 @@ class Piggy(PiggyParent):
       while True:
         self.fwd()
         self.servo(1000)
-        time.sleep(.25)
+        time.sleep(.2)
         right = self.read_distance()
         self.servo(1500)
-        time.sleep(.25)
+        time.sleep(.2)
         center = self.read_distance()
         self.servo(2000)
-        time.sleep(.25)
+        time.sleep(.2)
         left = self.read_distance()
 
     def swerve(self):
@@ -77,10 +77,13 @@ class Piggy(PiggyParent):
       right = self.read_distance()
       center = self.read_distance()
       left = self.read_distance()
+
       while True:
         if self.read_distance() >= stopping_distance:
           self.fwd_w_scan()
+
         elif self.read_distance() < stopping_distance:
+          self.read_distance()
           if (right > left):
             self.right(primary = 30, counter = -20)
             time.sleep(1)
