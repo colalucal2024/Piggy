@@ -43,7 +43,7 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "s": ("square", self.square),
                 "x": ("distance", self.liam),
-                "e": ("scan", self.swerve)
+                "e": ("scan", self.fwd_w_scan)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -58,18 +58,47 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+    def swerve_left(self):
+      self.left(primary = 30, counter = 20)
+      time.sleep(1)
+      self.right(primary = 30, counter = 20)
+      time.sleep(1)
+
+
+    def swerve_right(self):
+      self.right(primary = 30, counter = 20)
+      time.sleep(1)
+      self.left(primary = 30, counter = 20)
+      time.sleep(1)
+
     def fwd_w_scan(self):
+      stopping_distance = 200
+      check_distance = 300
+      right = self.read_distance()
+      center = self.read_distance()
+      left = self.read_distance()
       while True:
         self.fwd()
         self.servo(1000)
         time.sleep(.2)
-        right = self.read_distance()
+        left = self.read_distance()
         self.servo(1500)
         time.sleep(.2)
         center = self.read_distance()
         self.servo(2000)
         time.sleep(.2)
-        left = self.read_distance()
+        right = self.read_distance()
+
+        if (left >= right and left >= center):
+          self.swerve_left()
+        
+        if (right > left and right > center):
+          self.swerve_right()
+        
+        if (center > right and center > left):
+          self.liam()
+
+        
 
     def swerve(self):
       stopping_distance = 200
