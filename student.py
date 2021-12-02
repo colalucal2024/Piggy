@@ -94,10 +94,10 @@ class Piggy(PiggyParent):
         time.sleep(.2)
         center = self.read_distance()
 
-        if (self.read_distance() >= stopping_distance) and (ang < self.MIDPOINT):
+        if (self.read_distance() >= stopping_distance) and (angle < self.MIDPOINT):
           self.swerve_left()
         
-        elif (self.read_distance() >= stopping_distance and (ang > self.MIDPOINT)):
+        elif (self.read_distance() >= stopping_distance and (angle > self.MIDPOINT)):
           self.swerve_right()
         
         elif (self.read_distance() >= stopping_distance and center > right and center > left):
