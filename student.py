@@ -59,6 +59,7 @@ class Piggy(PiggyParent):
     ****************
     '''
     def swerve_left(self):
+      print "left"
       self.left(primary =100, counter = 20)
       time.sleep(1)
       self.right(primary =100, counter = 20)
@@ -66,6 +67,7 @@ class Piggy(PiggyParent):
 
 
     def swerve_right(self):
+      print "right"
       self.right(primary = 100, counter = 20)
       time.sleep(1)
       self.left(primary =100, counter = 20)
