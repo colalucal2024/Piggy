@@ -92,10 +92,10 @@ class Piggy(PiggyParent):
         if (left >= right and left >= center):
           self.swerve_left()
         
-        if (right > left and right > center):
+        elif (right > left and right > center):
           self.swerve_right()
         
-        if (center > right and center > left):
+        elif (center > right and center > left):
           self.liam()
 
         
