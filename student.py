@@ -99,6 +99,8 @@ class Piggy(PiggyParent):
           self.swerve_right()
         
         elif (self.read_distance() >= stopping_distance and center > right and center > left):
+          self.stop()
+          time.sleep(1.5)
           self.liam()
 
         
