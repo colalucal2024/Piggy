@@ -88,6 +88,9 @@ class Piggy(PiggyParent):
         self.servo(2000)
         time.sleep(.2)
         right = self.read_distance()
+        self.servo(1500)
+        time.sleep(.2)
+        center = self.read_distance()
 
         if (self.read_distance() >= stopping_distance and left >= right and left >= center):
           self.swerve_left()
