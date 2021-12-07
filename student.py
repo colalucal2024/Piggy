@@ -60,17 +60,17 @@ class Piggy(PiggyParent):
     '''
     def swerve_left(self):
       print ("left")
-      self.left(primary =100, counter = 20)
+      self.left(primary =100, counter = 80)
       time.sleep(1)
-      self.right(primary =100, counter = 20)
+      self.right(primary =100, counter = 80)
       time.sleep(1)
 
 
     def swerve_right(self):
       print ("right")
-      self.right(primary = 100, counter = 20)
+      self.right(primary = 100, counter = 80)
       time.sleep(1)
-      self.left(primary =100, counter = 20)
+      self.left(primary =100, counter = 80)
       time.sleep(1)
 
     def fwd_w_scan(self):
@@ -121,15 +121,15 @@ class Piggy(PiggyParent):
         elif self.read_distance() < stopping_distance:
           self.read_distance()
           if (right > left):
-            self.right(primary =100, counter = 20)
+            self.right(primary =100, counter = 80)
             time.sleep(1)
-            self.left(primary =100, counter = 20)
+            self.left(primary =100, counter = 80)
             time.sleep(1)
 
           if (right < left):
-            self.left(primary =100, counter = 20)
+            self.left(primary =100, counter = 80)
             time.sleep(1)
-            self.right(primary =100, counter = 20)
+            self.right(primary =100, counter = 80)
             time.sleep(1)
 
     def liam(self):
