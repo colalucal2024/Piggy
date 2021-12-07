@@ -103,31 +103,29 @@ class Piggy(PiggyParent):
     def fwd_w_scan(self):
       stopping_distance = 200
       check_distance = 300
-      right = self.read_distance()
-      center = self.read_distance()
-      left = self.read_distance()
+      
       while True:
         self.fwd()
+
         self.servo(1000)
         time.sleep(.2)
         left = self.read_distance()
-        self.servo(1500)
-        time.sleep(.2)
-        center = self.read_distance()
+        
         self.servo(2000)
         time.sleep(.2)
         right = self.read_distance()
+        
         self.servo(1500)
         time.sleep(.2)
         center = self.read_distance()
 
-        if (self.read_distance() >= stopping_distance) and (left > right) and (left > center):
+        if (self.read_distance() >= stopping_distance) and (left > right):
           self.swerve_left()
         
-        elif (self.read_distance() >= stopping_distance) and (right > left) and (right > center):
+        elif (self.read_distance() >= stopping_distance) and (right > left):
           self.swerve_right()
         
-        elif (self.read_distance() >= stopping_distance) and (center > right) and (center > left):
+        elif (self.read_distance() <= stopping_distance):
           self.stop()
           time.sleep(1.5)
           self.liam()
@@ -160,9 +158,9 @@ class Piggy(PiggyParent):
             time.sleep(1)
 
     def liam(self):
-      stopping_distance = 200
-      check_distance = 400
-      while True:
+        stopping_distance = 200
+        check_distance = 400
+      
         if self.read_distance() >= stopping_distance:
           self.fwd()
         elif self.read_distance() < stopping_distance:
