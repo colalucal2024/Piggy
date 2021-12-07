@@ -150,7 +150,7 @@ class Piggy(PiggyParent):
           if (right > left): 
             self.stop()
             self.right()
-            time.sleep(1.2)
+            time.sleep(1)
             self.fwd()
             time.sleep(1.5)
             self.left()
@@ -168,7 +168,7 @@ class Piggy(PiggyParent):
           elif (right < left): 
             self.stop()
             self.left()
-            time.sleep(1.2)
+            time.sleep(1)
             self.fwd()
             time.sleep(1.5)
             self.right()
