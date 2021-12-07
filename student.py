@@ -43,7 +43,8 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "s": ("square", self.square),
                 "x": ("distance", self.liam),
-                "e": ("scan", self.fwd_w_scan)
+                "e": ("intermediate movement", self.fwd_w_scan),
+                "m": ("maze navigation", self.maze)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -58,6 +59,18 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+    def maze(self):
+      stopping_distance = 100
+      check_distance = 150
+      right = self.read_distance()
+      center = self.read_distance()
+      left = self.read_distance()
+      while True:
+        self.fwd()
+        if self.read_distance() >= stopping_distance:
+
+
+
     def swerve_left(self):
       print ("left")
       self.left(primary =100, counter = 70)
