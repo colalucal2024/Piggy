@@ -59,6 +59,7 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+'''
     def maze(self):
       stopping_distance = 100
       check_distance = 150
@@ -68,7 +69,7 @@ class Piggy(PiggyParent):
       while True:
         self.fwd()
         if self.read_distance() >= stopping_distance:
-
+'''
 
 
     def swerve_left(self):
