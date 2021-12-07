@@ -70,8 +70,6 @@ class Piggy(PiggyParent):
         self.fwd()
         if self.read_distance() >= stopping_distance:
 '''
-
-
     def swerve_left(self):
       print ("left")
       self.left(primary =100, counter = 70)
