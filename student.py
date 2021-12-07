@@ -101,22 +101,22 @@ class Piggy(PiggyParent):
       time.sleep(1)
 
     def fwd_w_scan(self):
-      stopping_distance = 200
-      check_distance = 300
+      stopping_distance = 100
+      check_distance = 150
       
       while True:
         self.fwd()
 
         self.servo(1000)
-        time.sleep(.2)
+        time.sleep(.1)
         left = self.read_distance()
         
         self.servo(2000)
-        time.sleep(.2)
+        time.sleep(.1)
         right = self.read_distance()
         
         self.servo(1500)
-        time.sleep(.2)
+        time.sleep(.1)
         center = self.read_distance()
 
         if (self.read_distance() >= stopping_distance) and (left > right) and (right < stopping_distance):
@@ -269,7 +269,7 @@ class Piggy(PiggyParent):
         time.sleep(1) # turn for a second
         self.stop() # stop
         self.servo(1000) # look right
-        time.sleep(.25) # give your head time to move
+        time.sleep(.15) # give your head time to move
         self.servo(2000) # look left
 
     def scan(self):
