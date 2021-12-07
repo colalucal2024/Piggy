@@ -150,7 +150,7 @@ class Piggy(PiggyParent):
           if (right > left): 
             self.stop()
             self.right()
-            time.sleep(1)
+            time.sleep(.75)
             self.fwd()
             time.sleep(1.5)
             self.left()
@@ -158,17 +158,17 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(2)
             self.left()
-            time.sleep(1.2)
+            time.sleep(.75)
             self.fwd()
             time.sleep(1.5)
             self.right()
-            time.sleep(1.0)
+            time.sleep(.75)
             self.servo(self.MIDPOINT)
 
           elif (right < left): 
             self.stop()
             self.left()
-            time.sleep(1)
+            time.sleep(.75)
             self.fwd()
             time.sleep(1.5)
             self.right()
@@ -176,11 +176,11 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(2)
             self.right()
-            time.sleep(1.2)
+            time.sleep(.75)
             self.fwd()
             time.sleep(1.5)
             self.left()
-            time.sleep(1.0)
+            time.sleep(.75)
             self.servo(self.MIDPOINT)
             
 
@@ -199,7 +199,7 @@ class Piggy(PiggyParent):
         time.sleep(3)
         self.stop()
         self.right(primary = 38, counter = -38)
-        time.sleep(1.2)
+        time.sleep(.75)
         self.stop()
 
     
