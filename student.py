@@ -87,17 +87,17 @@ class Piggy(PiggyParent):
 
     def swerve_left(self):
       print ("left")
-      self.left(primary =100, counter = 70)
+      self.left(primary = 70, counter = 100)
       time.sleep(1)
-      self.right(primary =100, counter = 70)
+      self.right(primary =70, counter = 100)
       time.sleep(1)
 
 
     def swerve_right(self):
       print ("right")
-      self.right(primary = 100, counter = 70)
+      self.right(primary = 70, counter = 100)
       time.sleep(1)
-      self.left(primary =100, counter = 70)
+      self.left(primary =70, counter = 100)
       time.sleep(1)
 
     def fwd_w_scan(self):
@@ -245,9 +245,9 @@ class Piggy(PiggyParent):
           self.back()
           time.sleep(1)
           self.fwd()
-          self.right(primary = 70, counter = -170)
+          self.right(primary = 100, counter = -1100)
           time.sleep(1)
-          self.left(primary = 70, counter = -170)
+          self.left(primary = 100, counter = -1100)
           time.sleep(1)
           self.stop()
 
