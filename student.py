@@ -65,21 +65,29 @@ class Piggy(PiggyParent):
       check_distance = 150
       while True:
         self.fwd()
-        if (self.read_distance() <= stopping_distance):
-          self.left()
-          time.sleep(.75)
+
+        if (self.read_distance <= stopping_distance):
+          self.stop()
+          time.sleep(1)
+
+          self.servo(1000)
+          time.sleep(.1)
           left = self.read_distance()
-          self.right()
-          time.sleep(1.5)
+          
+          self.servo(2000)
+          time.sleep(.1)
           right = self.read_distance()
 
-          if (right > left):
-            self.fwd()
+          if (left <= stopping_distance):
+            self.right(.75)
           
-          if (left > right):
-            self.left()
-            time.sleep(1.5)
-            self.fwd()
+          if (right <= stopping_distance):
+            self.left(.75)
+
+
+
+   
+ 
 
 
     def swerve_left(self):
