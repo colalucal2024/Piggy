@@ -106,8 +106,7 @@ class Piggy(PiggyParent):
       time.sleep(1)
 
     def fwd_w_scan(self):
-      stopping_distance = 100
-      check_distance = 150
+      stopping_distance = 250
       
       while True:
         self.fwd()
