@@ -61,7 +61,7 @@ class Piggy(PiggyParent):
     '''
 
     def maze(self):
-      stopping_distance = 100
+      stopping_distance = 200
       check_distance = 150
       while True:
         self.fwd()
