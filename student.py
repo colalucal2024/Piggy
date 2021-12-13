@@ -82,13 +82,15 @@ class Piggy(PiggyParent):
           if (left < right):
             self.right()
             time.sleep(1.1)
+            self.stop()
           
           
           elif (right < left):
             self.left()
             time.sleep(1.1)
+            self.stop()
 
-          time.sleep(10)
+          
 
 
 
