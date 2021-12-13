@@ -71,13 +71,13 @@ class Piggy(PiggyParent):
           self.stop()
           time.sleep(1)
 
-          self.servo(500)
+          self.servo(750)
           time.sleep(1)
-          left = self.read_distance()
+          right = self.read_distance()
 
           self.servo(2250)
           time.sleep(1)
-          right = self.read_distance()
+          left = self.read_distance()
 
           if (left < right):
             self.right()
