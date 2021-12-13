@@ -19,7 +19,7 @@ class Piggy(PiggyParent):
         '''
         self.LEFT_DEFAULT = 71
         self.RIGHT_DEFAULT = 80
-        self.MIDPOINT = 1679  # what servo command (1000-2000) is straight forward for your bot?
+        self.MIDPOINT = 16785  # what servo command (1000-2000) is straight forward for your bot?
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
         self.load_defaults()
         
@@ -80,7 +80,7 @@ class Piggy(PiggyParent):
           left = self.read_distance()
 
           if (left <= stopping_distance and center < stopping_distance and left > stopping_distance):
-            self.right(.9)
+            self.right(.85)
           
           self.servo(2000)
           time.sleep(.1)
@@ -88,7 +88,7 @@ class Piggy(PiggyParent):
 
 
           if (right <= stopping_distance and center < stopping_distance and left > stopping_distance):
-            self.left(.9)
+            self.left(.85)
 
 
 
@@ -185,37 +185,37 @@ class Piggy(PiggyParent):
           if (right > left): 
             self.stop()
             self.right()
-            time.sleep(.9)
+            time.sleep(.85)
             self.fwd()
             time.sleep(1.5)
             self.left()
-            time.sleep(.9)
+            time.sleep(.85)
             self.fwd()
             time.sleep(2)
             self.left()
-            time.sleep(.9)
+            time.sleep(.85)
             self.fwd()
             time.sleep(1.5)
             self.right()
-            time.sleep(.9)
+            time.sleep(.85)
             self.servo(self.MIDPOINT)
 
           elif (right < left): 
             self.stop()
             self.left()
-            time.sleep(.9)
+            time.sleep(.85)
             self.fwd()
             time.sleep(1.5)
             self.right()
-            time.sleep(.9)
+            time.sleep(.85)
             self.fwd()
             time.sleep(2)
             self.right()
-            time.sleep(.9)
+            time.sleep(.85)
             self.fwd()
             time.sleep(1.5)
             self.left()
-            time.sleep(.9)
+            time.sleep(.85)
             self.servo(self.MIDPOINT)
             
 
@@ -234,7 +234,7 @@ class Piggy(PiggyParent):
         time.sleep(3)
         self.stop()
         self.right(primary = 38, counter = -38)
-        time.sleep(.9)
+        time.sleep(.85)
         self.stop()
 
     
