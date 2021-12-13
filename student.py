@@ -80,7 +80,7 @@ class Piggy(PiggyParent):
           left = self.read_distance()
 
           if (left <= stopping_distance and center < stopping_distance and left > stopping_distance):
-            self.right(.85)
+            self.right(1)
           
           self.servo(2000)
           time.sleep(.1)
@@ -88,7 +88,7 @@ class Piggy(PiggyParent):
 
 
           if (right <= stopping_distance and center < stopping_distance and left > stopping_distance):
-            self.left(.85)
+            self.left(1)
 
 
 
@@ -185,37 +185,37 @@ class Piggy(PiggyParent):
           if (right > left): 
             self.stop()
             self.right()
-            time.sleep(.85)
+            time.sleep(1)
             self.fwd()
             time.sleep(1.5)
             self.left()
-            time.sleep(.85)
+            time.sleep(1)
             self.fwd()
             time.sleep(2)
             self.left()
-            time.sleep(.85)
+            time.sleep(1)
             self.fwd()
             time.sleep(1.5)
             self.right()
-            time.sleep(.85)
+            time.sleep(1)
             self.servo(self.MIDPOINT)
 
           elif (right < left): 
             self.stop()
             self.left()
-            time.sleep(.85)
+            time.sleep(1)
             self.fwd()
             time.sleep(1.5)
             self.right()
-            time.sleep(.85)
+            time.sleep(1)
             self.fwd()
             time.sleep(2)
             self.right()
-            time.sleep(.85)
+            time.sleep(1)
             self.fwd()
             time.sleep(1.5)
             self.left()
-            time.sleep(.85)
+            time.sleep(1)
             self.servo(self.MIDPOINT)
             
 
@@ -234,7 +234,7 @@ class Piggy(PiggyParent):
         time.sleep(3)
         self.stop()
         self.right(primary = 38, counter = -38)
-        time.sleep(.85)
+        time.sleep(1)
         self.stop()
 
     
