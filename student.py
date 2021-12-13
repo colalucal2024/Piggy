@@ -197,7 +197,7 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(1.5)
             self.right()
-            time.sleep(1)
+            time.sleep(.8)
             self.servo(self.MIDPOINT)
 
           elif (right < left): 
@@ -215,7 +215,7 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(1.5)
             self.left()
-            time.sleep(1)
+            time.sleep(.8)
             self.servo(self.MIDPOINT)
             
 
