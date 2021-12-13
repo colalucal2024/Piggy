@@ -75,11 +75,11 @@ class Piggy(PiggyParent):
           time.sleep(.1)
           center = self.read_distance()
 
-          self.servo(1000)
+          self.servo(500)
           time.sleep(.1)
           left = self.read_distance()
 
-          self.servo(2000)
+          self.servo(2500)
           time.sleep(.1)
           right = self.read_distance()
 
